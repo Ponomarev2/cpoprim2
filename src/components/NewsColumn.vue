@@ -1,13 +1,13 @@
 <script setup>
-import { ref } from 'vue'
-import PostMini from './PostMini.vue'
+import { ref } from "vue";
+import NewsMini from "./NewsMini.vue";
 
-const props = defineProps(['count', 'items'])
+const props = defineProps(["count", "items"]);
 </script>
 
 <template>
   <div class="container">
-    <PostMini
+    <NewsMini
       v-if="props.items"
       v-for="(item, i) in props.items"
       :key="i"
@@ -16,7 +16,7 @@ const props = defineProps(['count', 'items'])
       :content="item.content"
       :date="item.date"
     />
-    <PostMini v-else v-for="(item, i) in [...Array(5).keys()]" />
+    <NewsMini v-else v-for="(item, i) in [...Array(5).keys()]" />
   </div>
 </template>
 
