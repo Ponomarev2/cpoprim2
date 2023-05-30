@@ -12,7 +12,7 @@ import DepartCard from "./components/DepartCard.vue";
     <div class="menu"></div>
     <div class="img"></div>
     <div class="top">
-      <img class="logo" src="./assets/landscape.png" />
+      <img class="logo" src="./assets/logo.png" />
       <div class="heading-box">
         <label class="heading big">
           <b>МКУ "Центр поддержки образования"</b>
@@ -61,7 +61,6 @@ import DepartCard from "./components/DepartCard.vue";
   align-items: center;
   font-family: "Montserrat", sans-serif;
   background-color: lightblue;
-  z-index: -2;
 }
 
 .menu {
@@ -69,12 +68,12 @@ import DepartCard from "./components/DepartCard.vue";
   height: 100px;
   background-color: pink;
   filter: opacity(0.7);
+  z-index: 2;
 }
 
 .img {
   top: 0;
   left: 0;
-  z-index: -1;
   position: absolute;
   width: 100%;
   height: 500px;
@@ -82,6 +81,7 @@ import DepartCard from "./components/DepartCard.vue";
   background-image: url("./assets/skyscape.png");
   background-size: cover;
   background-position: center;
+  z-index: 1;
 }
 
 .body {
@@ -89,9 +89,6 @@ import DepartCard from "./components/DepartCard.vue";
   display: flex;
   width: 90%;
   justify-self: center;
-}
-.body:hover {
-  background-color: yellowgreen;
 }
 
 .top {
@@ -103,6 +100,8 @@ import DepartCard from "./components/DepartCard.vue";
   width: 90%;
   color: rgb(50, 93, 128);
   background-color: beige;
+  z-index: 2;
+
 }
 
 .top:hover {
@@ -111,8 +110,9 @@ import DepartCard from "./components/DepartCard.vue";
 }
 
 .logo {
-  width: calc(20% - 2 * 20px);
-  margin: 20px;
+  height: calc(100% - 2 * 10px);
+  margin: 10px;
+  margin-left: 70px;
   aspect-ratio: initial;
 }
 
@@ -125,7 +125,6 @@ import DepartCard from "./components/DepartCard.vue";
   width: 100%;
   margin: 20px;
   height: fit-content;
-  vertical-align: middle;
   text-align: center;
 }
 .big {
