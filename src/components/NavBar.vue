@@ -6,14 +6,14 @@ const props = defineProps(['id', 'header', 'content', 'date'])
 </script>
 
 <template>
-  <div class="container">
-    <div class="date">{{ props.date ? props.date : '21-03-2023' }}</div>
-    <RouterLink v-if="props.header" :to="'/post/' + props.id" :id="props.id">
-      {{ props.header }}
-    </RouterLink>
-    <RouterLink v-else="props.header" to="/post/1">Заголовок</RouterLink>
-    <div class="text"></div>
+  <div class="dropdown">
+  <button>HubSpot Resources</button>
+  <div class="dropdown-content">
+  <a href="https://blog.hubspot.com/">Blog</a>
+  <a href="https://academy.hubspot.com/">Academy</a>
+  <a href="https://www.youtube.com/user/hubspot">YouTube</a>
   </div>
+</div>
 </template>
 
 <style scoped>

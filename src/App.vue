@@ -5,6 +5,7 @@ import SideBanner1 from "./components/SideBanner1.vue";
 import SideBanner2 from "./components/SideBanner2.vue";
 import SideBanner3 from "./components/SideBanner3.vue";
 import DepartCard from "./components/DepartCard.vue";
+import Dropdown from "./components/Dropdown.vue";
 </script>
 
 <template>
