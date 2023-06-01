@@ -37,8 +37,11 @@ import Dropdown from "./components/Dropdown.vue";
         </div>
       </div>
       <div class="content">
-        <DepartCard />
-        <DepartCard />
+        <div class="grid">
+          <DepartCard />
+          <DepartCard />
+          <DepartCard />
+        </div>
       </div>
     </div>
     <div class="foot">
@@ -102,12 +105,11 @@ import Dropdown from "./components/Dropdown.vue";
   color: rgb(50, 93, 128);
   background-color: beige;
   z-index: 2;
-
 }
 
 .top:hover {
   cursor: pointer;
-  background-color: steelblue;
+  /* background-color: steelblue; */
 }
 
 .logo {
@@ -155,6 +157,7 @@ import Dropdown from "./components/Dropdown.vue";
 }
 
 .news {
+  text-decoration: none;
   display: block;
   margin: 0;
   font-size: calc(1rem + 5px);
@@ -162,6 +165,10 @@ import Dropdown from "./components/Dropdown.vue";
   color: orange;
   text-align: center;
   background-color: white;
+}
+
+.news:hover {
+  text-decoration: underline;
 }
 
 .side-banners {
@@ -180,6 +187,14 @@ import Dropdown from "./components/Dropdown.vue";
   height: auto;
   background-color: #eeeeee;
   font-family: "PT Serif", serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .blind-mode {
