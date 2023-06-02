@@ -5,10 +5,7 @@ import { ref } from 'vue'
 <template>
   <div>
     <a href="https://minobrnauki.gov.ru/">
-      <img
-        class="banner-img"
-        src="https://minobrnauki.gov.ru/local/templates/minobr/images/dest/logo.svg"
-      />
+      <img class="banner-img" src="https://minobrnauki.gov.ru/local/templates/minobr/images/dest/logo.svg" />
     </a>
   </div>
 </template>
@@ -18,12 +15,18 @@ import { ref } from 'vue'
   height: 100px;
   width: 100%;
   aspect-ratio: initial;
-  z-index: 5;
   background-color: white;
   padding: 5px;
 }
 
-.banner-img:hover {
+
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a:hover .banner-img {
   filter: brightness(0.8);
 }
 </style>

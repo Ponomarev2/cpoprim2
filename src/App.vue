@@ -5,12 +5,14 @@ import SideBanner1 from "./components/SideBanner1.vue";
 import SideBanner2 from "./components/SideBanner2.vue";
 import SideBanner3 from "./components/SideBanner3.vue";
 import DepartCard from "./components/DepartCard.vue";
-import Dropdown from "./components/Dropdown.vue";
+import NavBar from "./components/NavBar.vue";
 </script>
 
 <template>
   <div class="page">
-    <div class="menu"></div>
+    <div class="navbar">
+      <NavBar></NavBar>
+    </div>
     <div class="img"></div>
     <div class="top">
       <img class="logo" src="./assets/logo.png" />
@@ -27,20 +29,23 @@ import Dropdown from "./components/Dropdown.vue";
         </div> -->
     </div>
     <div class="body">
-      <div class="aside">
-        <NewsColumn />
-        <RouterLink to="/" class="news">Все новости...</RouterLink>
-        <div class="side-banners">
-          <SideBanner1 />
-          <SideBanner2 />
-          <SideBanner3 />
+      <div class="wrapper">
+        <div class="aside">
+          <label>Новости</label>
+          <NewsColumn />
+          <RouterLink to="/" class="news">Все новости...</RouterLink>
+          <div class="side-banners">
+            <SideBanner1 />
+            <SideBanner2 />
+            <SideBanner3 />
+          </div>
         </div>
-      </div>
-      <div class="content">
-        <div class="grid">
-          <DepartCard />
-          <DepartCard />
-          <DepartCard />
+        <div class="content">
+          <div class="grid">
+            <DepartCard />
+            <DepartCard />
+            <DepartCard />
+          </div>
         </div>
       </div>
     </div>
@@ -64,14 +69,12 @@ import Dropdown from "./components/Dropdown.vue";
   justify-content: center;
   align-items: center;
   font-family: "Montserrat", sans-serif;
-  background-color: lightblue;
+  background-color: royalblue;
 }
 
-.menu {
+.navbar {
   width: 100%;
-  height: 100px;
-  background-color: pink;
-  filter: opacity(0.7);
+  height: 60px;
   z-index: 2;
 }
 
@@ -80,7 +83,7 @@ import Dropdown from "./components/Dropdown.vue";
   left: 0;
   position: absolute;
   width: 100%;
-  height: 500px;
+  height: 400px;
   background-color: red;
   background-image: url("./assets/skyscape.png");
   background-size: cover;
@@ -89,33 +92,37 @@ import Dropdown from "./components/Dropdown.vue";
 }
 
 .body {
+  z-index: 2;
+  font-family: 'PT Serif';
   background-color: white;
-  display: flex;
   width: 90%;
-  justify-self: center;
 }
 
 .top {
   font-family: "Roboto Slab", serif;
-  display: flex;
-  height: 200px;
   margin-top: 200px;
+  display: flex;
+  align-items: center;
+  height: 230px;
   border-radius: 20px 20px 0 0;
   width: 90%;
   color: rgb(50, 93, 128);
-  background-color: beige;
+  background-color: white;
   z-index: 2;
 }
 
-.top:hover {
-  cursor: pointer;
-  /* background-color: steelblue; */
+.wrapper {
+  margin: 1rem;
+  background-color: white;
+  display: flex;
+  justify-self: center;
+  border: 2px solid gainsboro;
 }
 
 .logo {
   height: calc(100% - 2 * 10px);
-  margin: 10px;
-  margin-left: 70px;
+  margin: 20px;
+  margin-left: 130px;
   aspect-ratio: initial;
 }
 
@@ -130,11 +137,13 @@ import Dropdown from "./components/Dropdown.vue";
   height: fit-content;
   text-align: center;
 }
+
 .big {
   font-size: 2.5rem;
 }
+
 .small {
-  color: skyblue;
+  color: royalblue;
   font-size: 1.7rem;
 }
 
@@ -146,14 +155,25 @@ import Dropdown from "./components/Dropdown.vue";
 }
 
 .aside {
-  margin: 1rem 1rem;
-  font-family: "PT Serif";
+  line-height: 1.5;
+  padding: 1rem 1rem;
+  font-family: "Roboto Slab", serif;
   display: block;
-  width: 20%;
+  width: 25%;
   min-height: 900px;
-  background-color: lightsteelblue;
+  background-color: white;
   overflow-y: clip;
-  border: 2px solid #eeeeee;
+  outline: 1px solid lightgray;
+}
+
+.aside>label {
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  color: steelblue;
 }
 
 .news {
@@ -165,6 +185,7 @@ import Dropdown from "./components/Dropdown.vue";
   color: orange;
   text-align: center;
   background-color: white;
+
 }
 
 .news:hover {
@@ -177,16 +198,18 @@ import Dropdown from "./components/Dropdown.vue";
   position: relative;
 }
 
-.side-banners > div {
+.side-banners>div {
   margin: 10px;
+  border: 1px solid gray;
 }
 
 .content {
-  width: 80%;
+  width: 75%;
   min-height: 900px;
   height: auto;
   background-color: #eeeeee;
   font-family: "PT Serif", serif;
+  outline: 2px solid lightgray;
 }
 
 .grid {
@@ -211,13 +234,13 @@ import Dropdown from "./components/Dropdown.vue";
   filter: blur(5px);
 }
 
-.blind-mode > img {
+.blind-mode>img {
   height: 100px;
   width: 100%;
   filter: blur(1px);
 }
 
-.blind-mode > label {
+.blind-mode>label {
   color: #000;
   font-family: "Roboto", sans-serif;
   font-size: 20px;

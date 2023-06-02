@@ -17,7 +17,14 @@ import { ref } from 'vue'
   aspect-ratio: initial;
 }
 
-.banner-img:hover {
+
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a:hover .banner-img {
   filter: brightness(0.8);
 }
 </style>

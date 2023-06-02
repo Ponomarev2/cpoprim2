@@ -7,12 +7,12 @@ const props = defineProps(["id", "header", "content", "date"]);
 
 <template>
   <div class="container news-mini">
-    <!-- <div class="date">{{ props.date ? props.date : "21-03-2023" }}</div> -->
+    <!-- <div class="date">{{ props.date ? props.date : "21.03.2023" }}</div> -->
     <RouterLink v-if="props.header" :to="'/post/' + props.id" :id="props.id">
       {{ props.header }}
     </RouterLink>
     <RouterLink v-else="props.header" to="/">
-      <label class="date">{{ props.date ? props.date : "21-03-2023" }}</label>
+      <label class="date">{{ props.date ? props.date : "21.03.2023" }}</label>
       Заголовок новости новости новости
     </RouterLink>
     <!-- <div class="text">
@@ -49,7 +49,7 @@ const props = defineProps(["id", "header", "content", "date"]);
 .text {
   color: #444444;
   height: 100%;
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 1.5em;
   display: -webkit-box;
   overflow: hidden;
@@ -64,8 +64,9 @@ a {
   width: fit-content;
   color: #333333;
   font-size: normal;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
+
 a:hover {
   cursor: pointer;
   color: black;

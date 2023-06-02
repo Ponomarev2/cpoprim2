@@ -7,17 +7,19 @@ const props = defineProps(['id', 'header', 'content', 'date'])
 
 <template>
   <div class="container">
-    
+    <div class="icon"></div>
+    <a class="header">Некий отдел</a>
   </div>
 </template>
 
 <style scoped>
 .container {
+  padding: 2rem;
   cursor: default;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   width: 100%;
-  height: 150px;
+  height: 200px;
   background-color: white;
   margin-top: 20px;
 }
@@ -27,25 +29,19 @@ const props = defineProps(['id', 'header', 'content', 'date'])
   transition: all 500ms;
 }
 
-.text {
-  color: #444444;
-  height: 100%;
-  font-size: 18px;
-  line-height: 1.5em;
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: pre-wrap;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+.icon {
+  background-color: yellowgreen;
+  height: 5rem;
+  width: 5rem;
 }
 
 a {
-  width: fit-content;
+  margin-left: 2rem;
   color: #333333;
   font-size: 30px;
   font-weight: bold;
 }
+
 a:hover {
   color: black;
   text-decoration: underline;
