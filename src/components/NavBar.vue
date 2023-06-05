@@ -13,7 +13,7 @@ const props = defineProps(["id", "header", "content", "date"]);
         <ul>
           <li><a href="#">Основные сведения</a></li>
           <li><a href="#">Устав</a></li>
-          <li><a href="#">Кадровый состав</a></li>
+          <li><a href="#">Структура</a></li>
         </ul>
       </li>
       <li>
