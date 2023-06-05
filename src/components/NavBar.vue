@@ -16,16 +16,12 @@ const props = defineProps(["id", "header", "content", "date"]);
           <li><a href="#">Кадровый состав</a></li>
         </ul>
       </li>
-      <li><a href="#">Отделы</a></li>
       <li>
-        <a href="#">Планы</a>
-        <ul>
-          <li><a href="#">Option 1</a></li>
-          <li><a href="#">Option 2</a></li>
-          <li><a href="#">Option 3</a></li>
-        </ul>
+        <RouterLink to="/contacts">Контакты</RouterLink>
       </li>
-      <li><RouterLink to="/contacts">Контакты</RouterLink></li>
+      <li>
+        <RouterLink to="/contacts">Обратная связь</RouterLink>
+      </li>
     </ul>
   </nav>
 </template>

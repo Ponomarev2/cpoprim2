@@ -2,13 +2,13 @@
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
 
-const props = defineProps(["id", "header", "content", "date"]);
+const props = defineProps(["id", "name"]);
 </script>
 
 <template>
   <div class="container">
     <div class="icon"></div>
-    <a class="header">Некий отдел</a>
+    <a class="header">{{ props.name ? props.name : 'Некий отдел' }}</a>
   </div>
 </template>
 

@@ -5,9 +5,9 @@ import DepartCard from '../components/DepartCard.vue'
 <template>
   <main>
     <div class="grid">
-      <DepartCard />
-      <DepartCard />
-      <DepartCard />
+      <DepartCard :name="'Методический отдел'"/>
+      <DepartCard :name="'ПМПК'"/>
+      <DepartCard :name="'ОУМТБ'"/>
     </div>
   </main>
 </template>
