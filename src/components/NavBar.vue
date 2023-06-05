@@ -18,7 +18,9 @@ const props = defineProps(['id', 'header', 'content', 'date'])
           <li><a href="#">Option 3</a></li>
         </ul>
       </li>
-      <li><a href="#">Контакты</a></li>
+      <li>
+        <RouterLink to="/contacts">Контакты</RouterLink>
+      </li>
     </ul>
   </nav>
 </template>

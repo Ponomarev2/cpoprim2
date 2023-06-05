@@ -5,25 +5,19 @@ import { RouterLink } from "vue-router";
 const props = defineProps(["id", "header", "content", "date"]);
 </script>
 
+
 <template>
   <div class="container news-mini">
-    <!-- <div class="date">{{ props.date ? props.date : "21.03.2023" }}</div> -->
-    <RouterLink v-if="props.header" :to="'/post/' + props.id" :id="props.id">
+    <RouterLink v-if="props.header" :to="'/post/' + props.id">
+      <label class="date">{{ props.date ? props.date : "21.03.2023" }}</label>
       {{ props.header }}
     </RouterLink>
-    <RouterLink v-else="props.header" to="/">
-      <label class="date">{{ props.date ? props.date : "21.03.2023" }}</label>
+    <RouterLink v-else to="/">
       Заголовок новости новости новости
     </RouterLink>
-    <!-- <div class="text">
-      {{
-        props.content
-          ? props.content
-          : 'Существуют две основные трактовки понятия «текст»: имманентная (расширенная, философски нагруженная) и репрезентативная (более частная). Имманентный подход подразумевает отношение к тексту как к автономной реальности, нацеленность на выявление его внутренней структуры. Репрезентативный - рассмотрение текста как особой формы представления информации о внешней тексту действительности.'
-      }}
-    </div> -->
   </div>
 </template>
+
 
 <style scoped>
 .container {
@@ -37,26 +31,8 @@ const props = defineProps(["id", "header", "content", "date"]);
   border-bottom: 2px dotted lightgrey;
 }
 
-.container:hover {
-  background-color: silver;
-  transition: all 500ms;
-}
-
 .date {
-  color: orange;
-}
-
-.text {
-  color: #444444;
-  height: 100%;
-  font-size: 1rem;
-  line-height: 1.5em;
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: pre-wrap;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  color: darkorange;
 }
 
 a {

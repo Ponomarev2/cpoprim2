@@ -8,25 +8,27 @@ import DepartCard from "./components/DepartCard.vue";
 import NavBar from "./components/NavBar.vue";
 </script>
 
+
 <template>
   <div class="page">
     <div class="navbar">
-      <NavBar></NavBar>
+      <NavBar />
     </div>
     <div class="img"></div>
     <div class="top">
-      <img class="logo" src="./assets/logo.png" />
+      <RouterLink to="/" class="logo">
+        <img src="./assets/IMG_33672.png" />
+      </RouterLink>
       <div class="heading-box">
         <label class="heading big">
           <b>МКУ "Центр поддержки образования"</b>
         </label>
         <label class="heading small">г. Приморско-Ахтарск</label>
       </div>
-
-      <!-- <div class="blind-mode">
-          <img src="./assets/slabovidyashie-3.png" />
-          <label>Версия для слабовидящих</label>
-        </div> -->
+      <div class="blind-mode">
+        <img src="./assets/24314261.jpg" />
+        <label>Версия для слабовидящих</label>
+      </div>
     </div>
     <div class="body">
       <div class="wrapper">
@@ -41,11 +43,7 @@ import NavBar from "./components/NavBar.vue";
           </div>
         </div>
         <div class="content">
-          <div class="grid">
-            <DepartCard />
-            <DepartCard />
-            <DepartCard />
-          </div>
+          <RouterView />
         </div>
       </div>
     </div>
@@ -55,6 +53,7 @@ import NavBar from "./components/NavBar.vue";
     </div>
   </div>
 </template>
+
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap");
@@ -122,7 +121,11 @@ import NavBar from "./components/NavBar.vue";
 .logo {
   height: calc(100% - 2 * 10px);
   margin: 20px;
-  margin-left: 130px;
+  margin-left: 7rem;
+}
+
+.logo>img {
+  height: 100%;
   aspect-ratio: initial;
 }
 
@@ -158,7 +161,9 @@ import NavBar from "./components/NavBar.vue";
   line-height: 1.5;
   padding: 1rem 1rem;
   font-family: "Roboto Slab", serif;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 25%;
   min-height: 900px;
   background-color: white;
@@ -173,7 +178,7 @@ import NavBar from "./components/NavBar.vue";
   width: 100%;
   text-align: center;
   background-color: white;
-  color: steelblue;
+  color: royalblue;
 }
 
 .news {
@@ -182,7 +187,7 @@ import NavBar from "./components/NavBar.vue";
   margin: 0;
   font-size: calc(1rem + 5px);
   width: 100%;
-  color: orange;
+  color: darkorange;
   text-align: center;
   background-color: white;
 
@@ -212,39 +217,34 @@ import NavBar from "./components/NavBar.vue";
   outline: 2px solid lightgray;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
 .blind-mode {
-  margin-bottom: 20px;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+  max-width: 200px;
   text-align: center;
   background-color: white;
-  border: 1px solid gray;
+  border-radius: 10px;
 }
 
-.blind-mode:hover {
+.blind-mode>label:hover {
   cursor: pointer;
+  text-decoration: underline;
   transition: all 200ms;
-  filter: blur(5px);
 }
 
 .blind-mode>img {
-  height: 100px;
-  width: 100%;
-  filter: blur(1px);
+  height: 50px;
+  aspect-ratio: initial;
 }
 
 .blind-mode>label {
-  color: #000;
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  line-height: 30px;
+  color: royalblue;
+  margin-top: 5px;
+  /* font-family: "Roboto", sans-serif; */
+  font-size: 1rem;
   font-weight: bold;
+  text-transform: uppercase;
 }
 </style>
