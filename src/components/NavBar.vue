@@ -8,7 +8,14 @@ const props = defineProps(["id", "header", "content", "date"]);
 <template>
   <nav class="navbar">
     <ul>
-      <li><a href="#">О МКУ ЦПО</a></li>
+      <li>
+        <a href="#">О МКУ ЦПО</a>
+        <ul>
+          <li><a href="#">Основные сведения</a></li>
+          <li><a href="#">Устав</a></li>
+          <li><a href="#">Кадровый состав</a></li>
+        </ul>
+      </li>
       <li><a href="#">Отделы</a></li>
       <li>
         <a href="#">Планы</a>
@@ -70,7 +77,7 @@ const props = defineProps(["id", "header", "content", "date"]);
 /* Style the dropdown menu */
 .navbar li ul {
   position: absolute;
-  top: calc(100% - 10px);
+  top: calc(100% - 6px);
   display: none;
 }
 

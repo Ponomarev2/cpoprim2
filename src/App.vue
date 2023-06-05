@@ -70,6 +70,7 @@ import NavBar from "./components/NavBar.vue";
 }
 
 .navbar {
+  font-size: 1rem;
   width: 100%;
   height: 60px;
   z-index: 2;
