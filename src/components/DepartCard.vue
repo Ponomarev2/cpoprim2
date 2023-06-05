@@ -1,8 +1,8 @@
 <script setup>
-import { ref } from 'vue'
-import { RouterLink } from 'vue-router'
+import { ref } from "vue";
+import { RouterLink } from "vue-router";
 
-const props = defineProps(['id', 'header', 'content', 'date'])
+const props = defineProps(["id", "header", "content", "date"]);
 </script>
 
 <template>
@@ -14,18 +14,20 @@ const props = defineProps(['id', 'header', 'content', 'date'])
 
 <style scoped>
 .container {
-  padding: 2rem;
+  padding: 1rem;
   cursor: default;
-  display: flex;
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 1rem;
   align-items: center;
   width: 100%;
   height: 200px;
-  background-color: white;
+  background-color: lightsteelblue;
   margin-top: 20px;
 }
 
 .container:hover {
-  background-color: silver;
+  background-color: gainsboro;
   transition: all 500ms;
 }
 
@@ -36,7 +38,6 @@ const props = defineProps(['id', 'header', 'content', 'date'])
 }
 
 a {
-  margin-left: 2rem;
   color: #333333;
   font-size: 30px;
   font-weight: bold;

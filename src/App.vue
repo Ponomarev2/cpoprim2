@@ -8,7 +8,6 @@ import DepartCard from "./components/DepartCard.vue";
 import NavBar from "./components/NavBar.vue";
 </script>
 
-
 <template>
   <div class="page">
     <div class="navbar">
@@ -35,7 +34,7 @@ import NavBar from "./components/NavBar.vue";
         <div class="aside">
           <label>Новости</label>
           <NewsColumn />
-          <RouterLink to="/" class="news">Все новости...</RouterLink>
+          <RouterLink to="/news" class="news">Все новости...</RouterLink>
           <div class="side-banners">
             <SideBanner1 />
             <SideBanner2 />
@@ -53,7 +52,6 @@ import NavBar from "./components/NavBar.vue";
     </div>
   </div>
 </template>
-
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap");
@@ -92,7 +90,7 @@ import NavBar from "./components/NavBar.vue";
 
 .body {
   z-index: 2;
-  font-family: 'PT Serif';
+  font-family: "PT Serif";
   background-color: white;
   width: 90%;
 }
@@ -121,10 +119,10 @@ import NavBar from "./components/NavBar.vue";
 .logo {
   height: calc(100% - 2 * 10px);
   margin: 20px;
-  margin-left: 7rem;
+  margin-left: 6rem;
 }
 
-.logo>img {
+.logo > img {
   height: 100%;
   aspect-ratio: initial;
 }
@@ -171,7 +169,8 @@ import NavBar from "./components/NavBar.vue";
   outline: 1px solid lightgray;
 }
 
-.aside>label {
+.aside > label {
+  margin: 5px;
   font-size: 1.3rem;
   font-weight: bold;
   display: block;
@@ -190,7 +189,6 @@ import NavBar from "./components/NavBar.vue";
   color: darkorange;
   text-align: center;
   background-color: white;
-
 }
 
 .news:hover {
@@ -203,7 +201,7 @@ import NavBar from "./components/NavBar.vue";
   position: relative;
 }
 
-.side-banners>div {
+.side-banners > div {
   margin: 10px;
   border: 1px solid gray;
 }
@@ -212,9 +210,9 @@ import NavBar from "./components/NavBar.vue";
   width: 75%;
   min-height: 900px;
   height: auto;
-  background-color: #eeeeee;
-  font-family: "PT Serif", serif;
-  outline: 2px solid lightgray;
+  background-color: white;
+  font-family: "Roboto Slab", serif;
+  outline: 1px solid lightgray;
 }
 
 .blind-mode {
@@ -228,18 +226,18 @@ import NavBar from "./components/NavBar.vue";
   border-radius: 10px;
 }
 
-.blind-mode>label:hover {
+.blind-mode > label:hover {
   cursor: pointer;
   text-decoration: underline;
   transition: all 200ms;
 }
 
-.blind-mode>img {
+.blind-mode > img {
   height: 50px;
   aspect-ratio: initial;
 }
 
-.blind-mode>label {
+.blind-mode > label {
   color: royalblue;
   margin-top: 5px;
   /* font-family: "Roboto", sans-serif; */
