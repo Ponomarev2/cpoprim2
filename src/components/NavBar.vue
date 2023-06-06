@@ -1,25 +1,26 @@
 <script setup>
-import { ref } from 'vue'
-import { RouterLink } from 'vue-router'
+import { ref } from "vue";
+import { RouterLink } from "vue-router";
 
-const props = defineProps(['id', 'header', 'content', 'date'])
+const props = defineProps(["id", "header", "content", "date"]);
 </script>
 
 <template>
   <nav class="navbar">
     <ul>
-      <li><a href="#">О МКУ ЦПО</a></li>
-      <li><a href="#">Home</a></li>
       <li>
-        <a href="#">План работы</a>
+        <a href="#">О МКУ ЦПО</a>
         <ul>
-          <li><a href="#">Option 1</a></li>
-          <li><a href="#">Option 2</a></li>
-          <li><a href="#">Option 3</a></li>
+          <li><a href="#">Основные сведения</a></li>
+          <li><a href="#">Устав</a></li>
+          <li><a href="#">Структура</a></li>
         </ul>
       </li>
       <li>
         <RouterLink to="/contacts">Контакты</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/contacts">Обратная связь</RouterLink>
       </li>
     </ul>
   </nav>
@@ -27,7 +28,10 @@ const props = defineProps(['id', 'header', 'content', 'date'])
 
 <style scoped>
 .navbar {
-  background-color: lightsteelblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(65, 105, 225, 0.534);
   position: relative;
   z-index: 999;
 }
@@ -35,22 +39,24 @@ const props = defineProps(['id', 'header', 'content', 'date'])
 .navbar ul {
   display: flex;
   justify-content: center;
+  gap: 10px;
   align-items: center;
-  height: 100%;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.navbar>ul>li {
-  height: 100%;
-  display: flex;
-  align-items: center;
+.navbar > ul > li {
+  border: 2px solid aliceblue;
 }
 
 .navbar li {
+  width: 15rem;
   background: darkblue;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
 }
 
 .navbar li a {
@@ -65,14 +71,10 @@ const props = defineProps(['id', 'header', 'content', 'date'])
 }
 
 /* Style the dropdown menu */
-.navbar ul ul {
+.navbar li ul {
   position: absolute;
-  top: 100%;
+  top: calc(100% - 6px);
   display: none;
-}
-
-.navbar ul ul li {
-  display: block;
 }
 
 .navbar li:hover ul {
@@ -80,7 +82,8 @@ const props = defineProps(['id', 'header', 'content', 'date'])
 }
 
 /* Change the background color of dropdown links on hover */
-.navbar ul ul li a:hover {
+.navbar ul ul li:hover {
   background-color: #555;
+  outline: 2px solid aliceblue;
 }
 </style>

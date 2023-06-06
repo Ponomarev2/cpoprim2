@@ -1,7 +1,7 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const props = defineProps(['title'])
+const props = defineProps(["title"]);
 </script>
 
 <template>
@@ -12,7 +12,7 @@ const props = defineProps(['title'])
 
 <style scoped>
 .box {
-  background-color: #dddddd;
+  background-color: gainsboro;
   text-align: center;
   /* border-top: 1px solid gray; */
 }
