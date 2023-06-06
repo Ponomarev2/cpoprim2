@@ -7,6 +7,7 @@ import Post from "../views/Post.vue";
 import Contacts from "../views/Contacts.vue";
 import News from "../views/News.vue";
 import Home from "../views/Home.vue";
+import FeedBack from "../views/FeedBack.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,12 +33,11 @@ const router = createRouter({
       name: "contacts",
       component: Contacts,
     },
-    // {
-    //   path: '/hotlines',
-    //   name: 'hotlines',
-    //   props: true,
-    //   component: Hotlines
-    // },
+    {
+      path: "/feedback",
+      name: "feedback",
+      component: FeedBack,
+    },
     // {
     //   path: '/palns',
     //   name: 'plans',
