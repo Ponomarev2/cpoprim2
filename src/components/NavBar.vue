@@ -20,7 +20,7 @@ const props = defineProps(["id", "header", "content", "date"]);
         <RouterLink to="/contacts">Контакты</RouterLink>
       </li>
       <li>
-        <RouterLink to="/contacts">Обратная связь</RouterLink>
+        <RouterLink to="/feedback">Обратная связь</RouterLink>
       </li>
     </ul>
   </nav>
