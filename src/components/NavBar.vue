@@ -46,7 +46,7 @@ const props = defineProps(["id", "header", "content", "date"]);
   padding: 0;
 }
 
-.navbar > ul > li {
+.navbar>ul>li {
   border: 2px solid aliceblue;
 }
 
@@ -60,9 +60,11 @@ const props = defineProps(["id", "header", "content", "date"]);
 }
 
 .navbar li a {
+  text-align: center;
+  padding: 10px 20px;
+  width: 100%;
   color: white;
   display: block;
-  padding: 10px 20px;
   text-decoration: none;
 }
 

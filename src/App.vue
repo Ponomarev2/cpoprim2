@@ -83,9 +83,9 @@ import NavBar from "./components/NavBar.vue";
   width: 100%;
   height: 400px;
   background-color: red;
-  background-image: url("./assets/skyscape.png");
+  background-image: url("./assets/skyline.png");
   background-size: cover;
-  background-position: center;
+  background-position-y: -120px;
   z-index: 1;
 }
 
@@ -123,7 +123,7 @@ import NavBar from "./components/NavBar.vue";
   margin-left: 6rem;
 }
 
-.logo > img {
+.logo>img {
   height: 100%;
   aspect-ratio: initial;
 }
@@ -170,7 +170,7 @@ import NavBar from "./components/NavBar.vue";
   outline: 1px solid lightgray;
 }
 
-.aside > label {
+.aside>label {
   margin: 5px;
   font-size: 1.3rem;
   font-weight: bold;
@@ -202,7 +202,7 @@ import NavBar from "./components/NavBar.vue";
   position: relative;
 }
 
-.side-banners > div {
+.side-banners>div {
   margin: 10px;
   border: 1px solid gray;
 }
@@ -227,18 +227,18 @@ import NavBar from "./components/NavBar.vue";
   border-radius: 10px;
 }
 
-.blind-mode > label:hover {
+.blind-mode>label:hover {
   cursor: pointer;
   text-decoration: underline;
   transition: all 200ms;
 }
 
-.blind-mode > img {
+.blind-mode>img {
   height: 50px;
   aspect-ratio: initial;
 }
 
-.blind-mode > label {
+.blind-mode>label {
   color: royalblue;
   margin-top: 5px;
   /* font-family: "Roboto", sans-serif; */
