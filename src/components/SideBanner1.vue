@@ -15,6 +15,9 @@ import { ref } from 'vue'
 .banner-img {
   height: 100px;
   width: 100%;
+  border-top: 5px solid white;
+  border-left: 20px solid white;
+  border-right: 20px solid white;
   aspect-ratio: initial;
 }
 

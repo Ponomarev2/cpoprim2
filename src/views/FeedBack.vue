@@ -1,19 +1,17 @@
 <script setup>
 import FeedBackForm from '../components/FeedBackForm.vue'
+import PageHeader from '../components/PageHeader.vue'
 </script>
 
 <template>
   <main>
-    <FeedBackForm />
+    <PageHeader class="page-header" title="Обратная связь" />
+    <FeedBackForm class="form" />
   </main>
 </template>
 
 <style scoped>
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+.form {
+  margin: 40px;
 }
 </style>
