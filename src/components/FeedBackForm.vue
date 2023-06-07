@@ -10,7 +10,7 @@ const phone = ref('');
 const fio = ref('');
 
 function sendEmail(){
-  window.open('mailto:primcpo@yandex.ru?&body=' + text.value);
+  window.open('mailto:primcpo@yandex.ru?subject=' + fio.value + ' ' + phone.value + '&body=' + text.value);
 }
 </script>
 

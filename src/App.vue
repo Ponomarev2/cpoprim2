@@ -1,4 +1,6 @@
 <script setup>
+
+import { ref } from "vue";
 import { RouterLink, RouterView } from "vue-router";
 import NewsColumn from "./components/NewsColumn.vue";
 import SideBanner1 from "./components/SideBanner1.vue";
@@ -6,10 +8,20 @@ import SideBanner2 from "./components/SideBanner2.vue";
 import SideBanner3 from "./components/SideBanner3.vue";
 import DepartCard from "./components/DepartCard.vue";
 import NavBar from "./components/NavBar.vue";
+
+const blind = ref(false);
+const fontSize = ref(1)
+
+function toggleBlindMode(){
+  blind.value = !blind.value;
+  fontSize.value = (fontSize.value) % 2 + 1;
+  console.log(fontSize.value)
+  console.log(blind.value);
+}
 </script>
 
 <template>
-  <div class="page">
+  <div class="page" :style="{ fontSize: fontSize + 'rem' }">
     <div class="navbar">
       <NavBar />
     </div>
@@ -26,7 +38,7 @@ import NavBar from "./components/NavBar.vue";
       </div>
       <div class="blind-mode">
         <img src="./assets/24314261.jpg" />
-        <label>Версия для слабовидящих</label>
+        <label @click="toggleBlindMode">Версия для слабовидящих</label>
       </div>
     </div>
     <div class="body">
@@ -67,10 +79,11 @@ import NavBar from "./components/NavBar.vue";
   align-items: center;
   font-family: "Montserrat", sans-serif;
   background-color: royalblue;
+  font-size: 1rem;
 }
 
 .navbar {
-  font-size: 1rem;
+  font-size: normal;
   width: 100%;
   height: 60px;
   z-index: 2;
@@ -172,7 +185,7 @@ import NavBar from "./components/NavBar.vue";
 
 .aside>label {
   margin: 5px;
-  font-size: 1.3rem;
+  font-size: larger;
   font-weight: bold;
   display: block;
   width: 100%;
@@ -185,7 +198,7 @@ import NavBar from "./components/NavBar.vue";
   text-decoration: none;
   display: block;
   margin: 0;
-  font-size: calc(1rem + 5px);
+  font-size: larger;
   width: 100%;
   color: darkorange;
   text-align: center;
