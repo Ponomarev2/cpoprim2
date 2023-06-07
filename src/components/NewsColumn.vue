@@ -3,6 +3,7 @@ import { ref } from "vue";
 import NewsMini from "./NewsMini.vue";
 
 const props = defineProps(["count", "items"]);
+// const parser = new xml2js.Parser({trim: true, explicitArray: true});
 </script>
 
 <template>
