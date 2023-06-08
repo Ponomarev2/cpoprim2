@@ -6,7 +6,7 @@ const props = defineProps(["id", "header", "content", "date"]);
 </script>
 
 <template>
-  <div class="container news-mini">
+  <div class="container">
     <RouterLink v-if="props.header" :to="'/post/' + props.id">
       <label class="date">{{ props.date ? props.date : "21.03.2023" }}</label>
       {{ props.header + " " + props.id }}
