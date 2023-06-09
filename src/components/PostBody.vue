@@ -1,13 +1,16 @@
 <script setup>
 import { ref } from "vue";
 
-const props = defineProps(["id"]);
+const props = defineProps(["id", "data"]);
 </script>
 
 <template>
   <div class="container">
-    <div class="date">21-01-2023</div>
-    <h1>Заголовок {{ props.id }}</h1>
+    <div class="date">
+      {{ props.data.date ? props.data.date : "23.03.2023" }}
+    </div>
+    <h1>Заголовок {{ props.data.header ? props.data.header : props.id }}</h1>
+    <div v-if="props.data">{{ props.data.content }}</div>
     <div class="text">
       <p>
         Текст (от лат. textus — ткань; сплетение, сочетание) — зафиксированная

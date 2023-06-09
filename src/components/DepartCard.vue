@@ -7,23 +7,22 @@ const props = defineProps(["id", "name"]);
 
 <template>
   <div class="container">
-    <div class="icon"></div>
-    <a class="header">{{ props.name ? props.name : 'Некий отдел' }}</a>
+    <!-- <div class="icon"></div> -->
+    <a class="header">{{ props.name ? props.name : "Некий отдел" }}</a>
   </div>
 </template>
 
 <style scoped>
 .container {
-  padding: 1rem;
+  padding: 2rem;
   cursor: default;
-  display: grid;
-  grid-template-columns: 5rem 1fr;
-  gap: 1rem;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: left;
   width: 100%;
   height: 200px;
   background-color: lightsteelblue;
-  margin-top: 20px;
 }
 
 .container:hover {
