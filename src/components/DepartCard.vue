@@ -2,13 +2,14 @@
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
 
-const props = defineProps(["id", "name"]);
+const props = defineProps(["name", "to"]);
 </script>
 
 <template>
   <div class="container">
     <!-- <div class="icon"></div> -->
-    <a class="header">{{ props.name ? props.name : "Некий отдел" }}</a>
+    <RouterLink class="header" :to="props.to">{{ props.name ? props.name : "Некий отдел" }}
+    </RouterLink>
   </div>
 </template>
 
@@ -40,6 +41,7 @@ a {
   color: #333333;
   font-size: 30px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 a:hover {

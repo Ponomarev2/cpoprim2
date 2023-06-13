@@ -14,6 +14,5 @@ const props = defineProps(["title"]);
 .box {
   background-color: gainsboro;
   text-align: center;
-  /* border-top: 1px solid gray; */
 }
 </style>

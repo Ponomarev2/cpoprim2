@@ -12,7 +12,7 @@ import NavBar from "./components/NavBar.vue";
 const blind = ref(false);
 const fontSize = ref(1)
 
-function toggleBlindMode(){
+function toggleBlindMode() {
   blind.value = !blind.value;
   fontSize.value = (fontSize.value) % 2 + 1;
   console.log(fontSize.value)
@@ -28,7 +28,7 @@ function toggleBlindMode(){
     <div class="img"></div>
     <div class="top">
       <RouterLink to="/" class="logo">
-        <img src="./assets/IMG_33672.png" />
+        <img src="./assets/logo.png" />
       </RouterLink>
       <div class="heading-box">
         <label class="heading big">
@@ -37,7 +37,7 @@ function toggleBlindMode(){
         <label class="heading small">г. Приморско-Ахтарск</label>
       </div>
       <div class="blind-mode">
-        <img src="./assets/24314261.jpg" />
+        <img src="./assets/eye.jpg" />
         <label @click="toggleBlindMode">Версия для слабовидящих</label>
       </div>
     </div>
@@ -133,7 +133,7 @@ function toggleBlindMode(){
 .logo {
   height: calc(100% - 2 * 10px);
   margin: 20px;
-  margin-left: 6rem;
+  margin-left: calc((100% - 2rem) * 0.25 / 2 + 1.5rem - 105px);
 }
 
 .logo>img {
@@ -180,7 +180,7 @@ function toggleBlindMode(){
   min-height: 900px;
   background-color: white;
   overflow-y: clip;
-  outline: 1px solid lightgray;
+  outline: 2px solid lightgray;
 }
 
 .aside>label {
@@ -226,7 +226,8 @@ function toggleBlindMode(){
   height: auto;
   background-color: white;
   font-family: "Roboto Slab", serif;
-  outline: 1px solid lightgray;
+  outline: 2px solid lightgray;
+  color: rgb(50, 93, 128);
 }
 
 .blind-mode {

@@ -9,7 +9,7 @@ const text = ref('');
 const phone = ref('');
 const fio = ref('');
 
-function sendEmail(){
+function sendEmail() {
   window.open('mailto:primcpo@yandex.ru?subject=' + fio.value + ' ' + phone.value + '&body=' + text.value);
 }
 </script>
@@ -18,7 +18,7 @@ function sendEmail(){
   <div class="txt">
     <div class="doc"></div>
     <form method="post" @submit="sendEmail">
-      <table cellpadding="10" cellspacing="1" class="nl" width="90%" align="center">
+      <table cellpadding="5" cellspacing="1" class="nl" width="90%" align="center">
         <tbody>
           <tr valign="top">
             <td>Ваше Имя:</td>

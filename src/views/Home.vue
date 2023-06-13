@@ -1,13 +1,14 @@
 <script setup>
 import DepartCard from "../components/DepartCard.vue";
+
 </script>
 
 <template>
   <main>
     <div class="grid">
-      <DepartCard :name="'Методический отдел'" />
-      <DepartCard :name="'ПМПК'" />
-      <DepartCard :name="'ОУМТБ'" />
+      <DepartCard :name="'Методический отдел'" :to="'/metod'" />
+      <DepartCard :name="'ПМПК'" :to="'/pmpk'" />
+      <DepartCard :name="'ОУМТБ'" :to="'/umtb'" />
     </div>
   </main>
 </template>
