@@ -11,6 +11,10 @@ import UMTB from "../views/UMTB.vue";
 import HtmlPost from "../views/HtmlPost.vue";
 
 import { rawHtml as pmpkRasp } from "../../data/html/pmpk-rasp.js"
+import { rawHtml as pmpk1 } from "../../data/html/pmpk1.js"
+import { rawHtml as pmpk2 } from "../../data/html/pmpk2.js"
+import { rawHtml as pmpk3 } from "../../data/html/pmpk3.js"
+import { rawHtml as pmpk4 } from "../../data/html/pmpk4.js"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -35,6 +39,26 @@ const router = createRouter({
       //     props: { html: pmpkRasp }
       //   },
       // ]
+    },
+    {
+      path: '/pmpk/1',
+      component: HtmlPost,
+      props: { html: pmpk1 }
+    },
+    {
+      path: '/pmpk/2',
+      component: HtmlPost,
+      props: { html: pmpk2 }
+    },
+    {
+      path: '/pmpk/3',
+      component: HtmlPost,
+      props: { html: pmpk3 }
+    },
+    {
+      path: '/pmpk/4',
+      component: HtmlPost,
+      props: { html: pmpk4 }
     },
     {
       path: '/pmpk/rasp',

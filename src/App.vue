@@ -6,7 +6,6 @@ import NewsColumn from "./components/NewsColumn.vue";
 import SideBanner1 from "./components/SideBanner1.vue";
 import SideBanner2 from "./components/SideBanner2.vue";
 import SideBanner3 from "./components/SideBanner3.vue";
-import DepartCard from "./components/DepartCard.vue";
 import NavBar from "./components/NavBar.vue";
 
 const blind = ref(false);
@@ -94,11 +93,11 @@ function toggleBlindMode() {
   left: 0;
   position: absolute;
   width: 100%;
-  height: 400px;
+  height: 500px;
   background-color: red;
   background-image: url("./assets/skyline.png");
   background-size: cover;
-  background-position-y: -120px;
+  background-position-y: -100px;
   z-index: 1;
 }
 
@@ -111,7 +110,7 @@ function toggleBlindMode() {
 
 .top {
   font-family: "Roboto Slab", serif;
-  margin-top: 200px;
+  margin-top: 250px;
   display: flex;
   align-items: center;
   height: 230px;
