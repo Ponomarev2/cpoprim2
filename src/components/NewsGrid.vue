@@ -2,7 +2,7 @@
 import { ref, onUpdated } from 'vue'
 import NewsMini from "./NewsMini.vue";
 import { RouterLink } from "vue-router";
-import { news } from "./NewsData.js";
+import { news } from "../../data/NewsData.js"
 
 const props = defineProps([]);
 const start = ref(0);

@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onUpdated } from 'vue'
-import { news } from "./NewsData.js";
+import { news } from "../../data/NewsData.js"
 
 const props = defineProps(["id"]);
 const data = ref(news[props.id - 1]);

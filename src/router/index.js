@@ -10,7 +10,7 @@ import PMPK from "../views/PMPK.vue";
 import UMTB from "../views/UMTB.vue";
 import HtmlPost from "../views/HtmlPost.vue";
 
-import { rawHtml as pmpkRasp } from "../data/html/pmpk-rasp.js"
+import { rawHtml as pmpkRasp } from "../../data/html/pmpk-rasp.js"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

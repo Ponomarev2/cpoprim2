@@ -1,1 +1,0 @@
-export const rawHtml = '<img src="/src/data/html/IMG_20230606_0003.jpg" width="100%"><img src="/src/data/html/IMG_20230607_0001.jpg" width="100%">';

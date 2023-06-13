@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import NewsMini from "./NewsMini.vue";
-import { news } from "./NewsData.js"
+import { news } from "../../data/NewsData.js"
 
 // const reader = new FileReader();
 // const text = reader.readAsText('./books.xml');
