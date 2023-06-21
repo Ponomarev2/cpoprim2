@@ -26,12 +26,19 @@ const props = defineProps(["id", "header", "content", "date"]);
   </nav>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+$colorA: rgb(10, 38, 71);
+$colorA-trans: rgba(10, 38, 71, 0.51);
+$colorB: rgb(20, 66, 114);
+$colorC: rgb(32, 82, 149);
+$colorD: rgb(44, 116, 179);
+
+
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(65, 105, 225, 0.534);
+  background-color: $colorA-trans;
   position: relative;
   z-index: 999;
 }
@@ -47,12 +54,12 @@ const props = defineProps(["id", "header", "content", "date"]);
 }
 
 .navbar>ul>li {
-  border: 2px solid aliceblue;
+  border: 2px solid white;
 }
 
 .navbar li {
-  width: 15rem;
-  background: darkblue;
+  width: 15vw;
+  background: $colorA;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,7 +76,7 @@ const props = defineProps(["id", "header", "content", "date"]);
 }
 
 .navbar li:hover {
-  background-color: royalblue;
+  background-color: $colorB;
 }
 
 /* Style the dropdown menu */
@@ -85,7 +92,7 @@ const props = defineProps(["id", "header", "content", "date"]);
 
 /* Change the background color of dropdown links on hover */
 .navbar ul ul li:hover {
-  background-color: #555;
-  outline: 2px solid aliceblue;
+  background-color: $colorB;
+  outline: 2px solid white;
 }
 </style>

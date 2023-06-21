@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "sass": "^1.63.4",
     "vue": "^3.3.2",
     "vue-router": "^4.2.0",
     "vue3-recaptcha2": "^1.7.0",

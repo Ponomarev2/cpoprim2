@@ -17,7 +17,7 @@ import DepartCard from "../components/DepartCard.vue";
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
-  margin: 1rem;
+  gap: min(1rem, 2vh);
+  margin: min(1rem, 2vh);
 }
 </style>

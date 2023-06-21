@@ -23,6 +23,5 @@ import PageHeader from "../components/PageHeader.vue";
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
   margin: 1rem;
-  font-size: x-small;
 }
 </style>

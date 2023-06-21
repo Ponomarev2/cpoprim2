@@ -15,11 +15,16 @@ const props = defineProps(["id", "header", "content", "date"]);
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+$colorA: rgb(10, 38, 71);
+$colorB: rgb(20, 66, 114);
+$colorC: rgb(32, 82, 149);
+$colorD: rgb(44, 116, 179);
+
 .container {
+  font-family: "Roboto Slab", serif;
   margin: 5px;
   text-align: inherit;
-  color: black;
   cursor: default;
   width: 100%;
   height: fit-content;
@@ -33,15 +38,15 @@ const props = defineProps(["id", "header", "content", "date"]);
 }
 
 a {
-  font-size: 1rem;
+  font-size: 1em;
   text-decoration: none;
   width: fit-content;
-  color: #333333;
+  color: $colorC;
 }
 
 a:hover {
   cursor: pointer;
-  color: black;
+  color: $colorB;
   text-decoration: underline;
   transition: all 0.4s;
 }

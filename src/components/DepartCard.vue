@@ -13,40 +13,47 @@ const props = defineProps(["name", "to"]);
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+$colorA: rgb(10, 38, 71);
+$colorB: rgb(20, 66, 114);
+$colorC: rgb(32, 82, 149);
+$colorD: rgb(44, 116, 179);
+$colorE: rgb(66, 148, 210);
+$colorF: rgb(90, 180, 240);
+$colorG: rgb(196, 222, 255);
+
 .container {
-  padding: 2rem;
+  padding: 5%;
   cursor: default;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: left;
   width: 100%;
-  height: 200px;
-  background-color: lightsteelblue;
+  height: min(200px, 20vh);
+  background-color: $colorA;
+  font-family: "Montserrat", sans-serif;
 }
 
 .container:hover {
-  background-color: gainsboro;
+  background-color: $colorC;
   transition: all 500ms;
 }
 
 .icon {
   background-color: yellowgreen;
-  height: 5rem;
-  width: 5rem;
 }
 
 a {
+  font-size: min(1.5vw, 1.5em);
   text-align: center;
-  color: #333333;
-  font-size: 30px;
+  color: white;
   font-weight: bold;
   text-decoration: none;
 }
 
 a:hover {
-  color: black;
+  color: white;
   text-decoration: underline;
   transition: all 0.4s;
 }
