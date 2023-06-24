@@ -25,11 +25,13 @@ import PageHeader from "../components/PageHeader.vue";
   </main>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+$fontSizeA: calc(2px + 1vw);
+
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
-  margin: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+  gap: $fontSizeA;
+  margin: $fontSizeA;
 }
 </style>

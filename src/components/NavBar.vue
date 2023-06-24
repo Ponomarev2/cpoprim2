@@ -32,7 +32,12 @@ $colorA-trans: rgba(10, 38, 71, 0.51);
 $colorB: rgb(20, 66, 114);
 $colorC: rgb(32, 82, 149);
 $colorD: rgb(44, 116, 179);
+$borderThick: clamp(0.7px, min(0.3vw, 0.3vh), 5px);
 
+
+li {
+  border-radius: clamp(0.8vw, 10px, 0.8vh);
+}
 
 .navbar {
   display: flex;
@@ -41,6 +46,7 @@ $colorD: rgb(44, 116, 179);
   background-color: $colorA-trans;
   position: relative;
   z-index: 999;
+  padding: 1vh;
 }
 
 .navbar ul {
@@ -54,21 +60,20 @@ $colorD: rgb(44, 116, 179);
 }
 
 .navbar>ul>li {
-  border: 2px solid white;
+  border: $borderThick solid white;
 }
 
 .navbar li {
-  width: 15vw;
+  width: clamp(16em, 16vw, 20em);
   background: $colorA;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
 }
 
 .navbar li a {
   text-align: center;
-  padding: 10px 20px;
+  padding: min(1vw, 10px) min(1vh, 20px);
   width: 100%;
   color: white;
   display: block;
@@ -82,7 +87,7 @@ $colorD: rgb(44, 116, 179);
 /* Style the dropdown menu */
 .navbar li ul {
   position: absolute;
-  top: calc(100% - 6px);
+  top: calc(100% - 1vh);
   display: none;
 }
 
@@ -93,6 +98,6 @@ $colorD: rgb(44, 116, 179);
 /* Change the background color of dropdown links on hover */
 .navbar ul ul li:hover {
   background-color: $colorB;
-  outline: 2px solid white;
+  outline: $borderThick solid white;
 }
 </style>

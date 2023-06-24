@@ -13,11 +13,13 @@ import DepartCard from "../components/DepartCard.vue";
   </main>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+$fontSizeA: calc(2px + 1vw);
+
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: min(1rem, 2vh);
-  margin: min(1rem, 2vh);
+  grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+  gap: $fontSizeA;
+  margin: $fontSizeA;
 }
 </style>

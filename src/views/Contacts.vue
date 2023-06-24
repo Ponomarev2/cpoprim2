@@ -12,7 +12,7 @@ const map = ref(YandexMap)
     <PageHeader class="page-header" title="Контакты" />
     <div class="body">
       <h3>Телефоны:</h3>
-      <table class="phone" width="617" height="235" border="0" align="center" bordercolor="#000000" bgcolor="#666666">
+      <table class="phone" width="85%" height="50vh" border="0" align="center" bordercolor="#000000" bgcolor="#666666">
         <tbody>
           <tr bgcolor="#FFFFFF">
             <td width="268" height="40" bordercolor="#000000">
@@ -66,7 +66,9 @@ const map = ref(YandexMap)
               <div align="center"><strong>руководитель ПМПК</strong></div>
             </td>
             <td bordercolor="#000000" bgcolor="#FFFFFF">
-              <div align="center"><b>3-10-72 </b></div>
+              <b><span class="стиль1">
+                  <font color="#FFFFFF">3</font>&nbsp; 3-10-72<font color="#FFFFFF">8</font>
+                </span></b>
             </td>
           </tr>
         </tbody>
@@ -102,5 +104,9 @@ h3 {
 
 .map {
   margin-top: 1em;
+}
+
+td {
+  text-align: center;
 }
 </style>

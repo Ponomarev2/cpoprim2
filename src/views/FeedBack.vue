@@ -12,6 +12,6 @@ import PageHeader from '../components/PageHeader.vue'
 
 <style scoped>
 .form {
-  margin: 40px;
+  margin: 4vw;
 }
 </style>

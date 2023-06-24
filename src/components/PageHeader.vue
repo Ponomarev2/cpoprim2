@@ -6,11 +6,15 @@ const props = defineProps(["title"]);
 
 <template>
   <div class="box">
-    <h1>{{ props.title }}</h1>
+    <h2>{{ props.title }}</h2>
   </div>
 </template>
 
 <style scoped>
+h2 {
+  font-size: 1.7vw;
+}
+
 .box {
   background-color: rgb(233, 233, 233);
   text-align: center;

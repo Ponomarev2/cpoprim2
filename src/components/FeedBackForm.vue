@@ -24,9 +24,9 @@ function sendEmail() {
             <td>Ваше Имя:</td>
             <td>Телефон:</td>
           </tr>
-          <tr>
-            <td><input name="fio" size="20" v-model="fio"></td>
-            <td><input name="phone" size="20" v-model="phone"></td>
+          <tr class="top">
+            <td><input name="fio" v-model="fio"></td>
+            <td><input name="phone" v-model="phone"></td>
           </tr>
           <tr>
             <td colspan="3" nowrap="nowrap">
@@ -46,4 +46,20 @@ function sendEmail() {
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.top input {
+  width: 20vw;
+  height: 2em;
+}
+
+textarea {
+  width: 50vw;
+  height: 30vh;
+}
+
+input[type=submit] {
+  font-size: 1em;
+  padding: 0.3em;
+  cursor: pointer;
+}
+</style>

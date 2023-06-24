@@ -5,8 +5,7 @@ import { ref } from 'vue'
 <template>
   <div>
     <a href="https://www.prahtarsk.ru/">
-      <img class="banner-img"
-        src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Flag_of_Primorsko-Akhtarsk_rayon_%28Krasnodar_krai%29.png" />
+      <img class="banner-img" src="../assets/Flag_of_Primorsko-Akhtarsk_rayon_(Krasnodar_krai).png" />
       <p>Администрация Приморско-Ахтарского района</p>
     </a>
   </div>
@@ -40,7 +39,7 @@ p {
   cursor: pointer;
   width: 50%;
   text-align: left;
-  font-size: min(0.8em, 1vw);
+  font-size: min(0.8em, 0.8vw);
   font-weight: 500;
 }
 </style>

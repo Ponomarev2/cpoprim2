@@ -76,26 +76,26 @@ $colorB: rgb(20, 66, 114);
 $colorC: rgb(32, 82, 149);
 $colorD: rgb(44, 116, 179);
 $border: rgb(220, 225, 237);
+$fontSizeA: calc(2px + 1.1vw);
+$borderThick: clamp(0.5px, max(0.15vw, 0.15vh), 5px);
+
 
 .page {
   position: relative;
-  width: 100%;
-  // min-width: 980px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Montserrat", sans-serif;
   background-color: $colorC;
-  font-size: 1rem;
+  font-size: $fontSizeA;
 }
 
 .navbar {
-  font-size: normal;
+  font-size: $fontSizeA;
   width: 100%;
-  // min-width: 640px;
-  height: 60px;
-  z-index: 2;
+  height: calc(fit-content + 2em);
+  z-index: 3;
 }
 
 .img {
@@ -103,10 +103,10 @@ $border: rgb(220, 225, 237);
   left: 0;
   position: absolute;
   width: 100%;
-  height: 500px;
+  height: 50vh;
   background-image: url("./assets/skyline.png");
   background-size: cover;
-  background-position-y: -100px;
+  background-position-y: -10vh;
   z-index: 1;
 }
 
@@ -114,41 +114,33 @@ $border: rgb(220, 225, 237);
   z-index: 2;
   background-color: white;
   width: 90%;
-  // min-width: 1000px;
+  font-size: $fontSizeA;
+  padding: calc(1 * $fontSizeA);
 }
 
 .top {
-  margin-top: 250px;
+  margin-top: 20vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 230px;
-  border-radius: 20px 20px 0 0;
+  height: min(30vh, 30vw);
+  border-radius: min(5vh, 5vw) min(5vh, 5vw) 0 0;
   width: 90%;
-  // min-width: 1000px;
   color: $colorB;
   background-color: white;
   z-index: 2;
-  padding-right: 2rem;
-}
-
-.wrapper {
-  margin: 0;
-  background-color: white;
-  display: flex;
-  justify-self: center;
-  border: 2px solid $border;
+  padding-right: calc(2 * $fontSizeA);
+  padding-left: calc(1 * $fontSizeA);
 }
 
 .logo {
-  justify-self: start;
-  height: calc(100% - 2 * 10px);
+  height: calc(100% - 2 * 1vh);
   text-align: center;
   width: 25%;
 }
 
 .logo>img {
-  height: 100%;
+  height: 95%;
   aspect-ratio: initial;
 }
 
@@ -160,12 +152,12 @@ $border: rgb(220, 225, 237);
 
 .big {
   font-family: "Roboto Slab", serif;
-  font-size: min(2.3vw, 2.3rem);
+  font-size: calc($fontSizeA * 2.1);
 }
 
 .small {
   color: $colorD;
-  font-size: min(1.5vw, 1.5rem);
+  font-size: calc($fontSizeA * 1.3);
 }
 
 
@@ -173,10 +165,9 @@ $border: rgb(220, 225, 237);
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 200px;
+  width: 12vw;
   text-align: center;
   background-color: white;
-  border-radius: 10px;
 }
 
 .blind-mode>label:hover {
@@ -186,33 +177,40 @@ $border: rgb(220, 225, 237);
 }
 
 .blind-mode>img {
-  height: 50px;
+  height: min(8vh, 8vw);
   aspect-ratio: initial;
   filter: saturate(0.7);
-  transform: scale(1.3);
+  // transform: scale(1.3);
 }
 
 .blind-mode>label {
   color: $colorA;
-  margin-top: 12px;
-  /* font-family: "Roboto", sans-serif; */
-  font-size: min(1vw, 1rem);
+  margin-top: 1vh;
+  font-size: calc($fontSizeA * 0.8);
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.wrapper {
+  margin: 0;
+  background-color: white;
+  display: flex;
+  justify-self: center;
+  border: $borderThick solid $border;
 }
 
 .aside {
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
-  padding: 1rem 1rem;
+  padding: $fontSizeA $fontSizeA;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 25%;
-  min-height: 900px;
+  min-height: 600px;
   background-color: white;
   overflow-y: clip;
-  outline: 2px solid $border;
+  outline: $borderThick solid $border;
 }
 
 .aside>label {
@@ -242,15 +240,15 @@ $border: rgb(220, 225, 237);
 }
 
 .side-banners {
-  margin-top: 100px;
-  margin-bottom: 20px;
+  margin-top: 8em;
+  margin-bottom: 1em;
   position: relative;
 }
 
 .side-banners>div {
-  margin: 10px;
-  border: 2px solid $border;
-  height: min(100px, 7em);
+  margin: 1vh;
+  border: $borderThick solid $border;
+  height: min(12vh, 10vw);
 }
 
 .content {
@@ -258,7 +256,7 @@ $border: rgb(220, 225, 237);
   height: auto;
   background-color: white;
   font-family: "Roboto Slab", serif;
-  outline: 2px solid $border;
+  outline: $borderThick solid $border;
   color: $colorB;
 }
 
@@ -267,5 +265,14 @@ $border: rgb(220, 225, 237);
   color: white;
   background-color: $colorB;
   text-align: center;
+}
+
+@media (max-width: 700px) {
+
+  .top,
+  .body,
+  .foot {
+    width: 100%;
+  }
 }
 </style>

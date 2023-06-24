@@ -5,7 +5,7 @@ import { ref } from 'vue'
 <template>
   <div>
     <a href="https://minobr.krasnodar.ru/">
-      <img class="banner-img" src="https://school1-viselki.ru/images/ssilki/mon.png" />
+      <img class="banner-img" src="../assets/mon.png" />
     </a>
   </div>
 </template>

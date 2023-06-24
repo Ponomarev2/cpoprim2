@@ -23,14 +23,14 @@ $colorF: rgb(90, 180, 240);
 $colorG: rgb(196, 222, 255);
 
 .container {
-  padding: 5%;
+  padding: min(5%, 1vw);
   cursor: default;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: left;
   width: 100%;
-  height: min(200px, 20vh);
+  height: min(15vw, 20vh);
   background-color: $colorA;
   font-family: "Montserrat", sans-serif;
 }
