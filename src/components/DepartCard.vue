@@ -14,13 +14,11 @@ const props = defineProps(["name", "to"]);
 </template>
 
 <style lang="scss" scoped>
-$colorA: rgb(10, 38, 71);
-$colorB: rgb(20, 66, 114);
-$colorC: rgb(32, 82, 149);
-$colorD: rgb(44, 116, 179);
-$colorE: rgb(66, 148, 210);
-$colorF: rgb(90, 180, 240);
-$colorG: rgb(196, 222, 255);
+$colorA: #0A2647;
+$colorB: #44658A;
+$colorC: #7EA3CC;
+$colorD: #BFD1E6;
+
 
 .container {
   padding: min(5%, 1vw);
@@ -31,12 +29,12 @@ $colorG: rgb(196, 222, 255);
   text-align: left;
   width: 100%;
   height: min(15vw, 20vh);
-  background-color: $colorA;
+  background-color: $colorB;
   font-family: "Montserrat", sans-serif;
 }
 
 .container:hover {
-  background-color: $colorC;
+  background-color: $colorA;
   transition: all 500ms;
 }
 

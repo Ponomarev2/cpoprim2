@@ -16,10 +16,10 @@ const props = defineProps(["id", "header", "content", "date"]);
 </template>
 
 <style lang="scss" scoped>
-$colorA: rgb(10, 38, 71);
-$colorB: rgb(20, 66, 114);
-$colorC: rgb(32, 82, 149);
-$colorD: rgb(44, 116, 179);
+$colorA: #47BBED;
+$colorB: #599FE0;
+$colorC: #2AA7F7;
+$colorD: #AACCFA;
 
 .container {
   font-family: "Roboto Slab", serif;

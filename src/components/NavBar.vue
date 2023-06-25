@@ -27,11 +27,12 @@ const props = defineProps(["id", "header", "content", "date"]);
 </template>
 
 <style lang="scss" scoped>
-$colorA: rgb(10, 38, 71);
-$colorA-trans: rgba(10, 38, 71, 0.51);
-$colorB: rgb(20, 66, 114);
-$colorC: rgb(32, 82, 149);
-$colorD: rgb(44, 116, 179);
+$colorA: #0A2647;
+$colorA-trans: #0a264787;
+$colorB: #44658A;
+$colorB-trans: #44658a82;
+$colorC: #6184AB;
+$colorD: #7EA3CC;
 $borderThick: clamp(0.7px, min(0.3vw, 0.3vh), 5px);
 
 
@@ -80,8 +81,8 @@ li {
   text-decoration: none;
 }
 
-.navbar li:hover {
-  background-color: $colorB;
+li:hover {
+  background-color: $colorC;
 }
 
 /* Style the dropdown menu */
@@ -97,7 +98,6 @@ li {
 
 /* Change the background color of dropdown links on hover */
 .navbar ul ul li:hover {
-  background-color: $colorB;
   outline: $borderThick solid white;
 }
 </style>

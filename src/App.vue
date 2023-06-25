@@ -71,11 +71,13 @@ function toggleBlindMode() {
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap");
 
-$colorA: rgb(10, 38, 71);
-$colorB: rgb(20, 66, 114);
-$colorC: rgb(32, 82, 149);
-$colorD: rgb(44, 116, 179);
-$border: rgb(220, 225, 237);
+$colorA: #0A2647;
+$colorB: #44658A;
+$colorC: #6184AB;
+$colorD: #7EA3CC;
+$colorE: #9FBAD9;
+$colorF: #BFD1E6;
+$border: #CCD8F0;
 $fontSizeA: calc(2px + 1.1vw);
 $borderThick: clamp(0.5px, max(0.15vw, 0.15vh), 5px);
 
@@ -87,7 +89,7 @@ $borderThick: clamp(0.5px, max(0.15vw, 0.15vh), 5px);
   justify-content: center;
   align-items: center;
   font-family: "Montserrat", sans-serif;
-  background-color: $colorC;
+  background-color: $colorD;
   font-size: $fontSizeA;
 }
 
@@ -126,7 +128,6 @@ $borderThick: clamp(0.5px, max(0.15vw, 0.15vh), 5px);
   height: min(30vh, 30vw);
   border-radius: min(5vh, 5vw) min(5vh, 5vw) 0 0;
   width: 90%;
-  color: $colorB;
   background-color: white;
   z-index: 2;
   padding-right: calc(2 * $fontSizeA);
@@ -151,6 +152,7 @@ $borderThick: clamp(0.5px, max(0.15vw, 0.15vh), 5px);
 }
 
 .big {
+  color: $colorB;
   font-family: "Roboto Slab", serif;
   font-size: calc($fontSizeA * 2.1);
 }
@@ -184,7 +186,7 @@ $borderThick: clamp(0.5px, max(0.15vw, 0.15vh), 5px);
 }
 
 .blind-mode>label {
-  color: $colorA;
+  color: $colorB;
   margin-top: 1vh;
   font-size: calc($fontSizeA * 0.8);
   font-weight: bold;
@@ -261,9 +263,10 @@ $borderThick: clamp(0.5px, max(0.15vw, 0.15vh), 5px);
 }
 
 .foot {
+  font-size: $fontSizeA;
   width: 90%;
   color: white;
-  background-color: $colorB;
+  background-color: $colorC;
   text-align: center;
 }
 
