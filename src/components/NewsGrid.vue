@@ -34,4 +34,8 @@ onUpdated(() => {
 .container {
   text-align: left;
 }
+
+button {
+  cursor: pointer;
+}
 </style>

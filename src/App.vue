@@ -11,16 +11,16 @@ import NavBar from "./components/NavBar.vue";
 const blind = ref(false);
 const fontSize = ref(1)
 
-function toggleBlindMode() {
+function toggleBlind() {
   blind.value = !blind.value;
   fontSize.value = (fontSize.value) % 2 + 1;
-  console.log(fontSize.value)
+  console.log(fontSize.value);
   console.log(blind.value);
 }
 </script>
 
 <template>
-  <div class="page" :style="{ fontSize: fontSize + 'rem' }">
+  <div class="page" :style="{ 'font-size': fontSize + 'em' }">
     <div class="navbar">
       <NavBar />
     </div>
@@ -38,7 +38,7 @@ function toggleBlindMode() {
       </div>
       <div class="blind-mode">
         <img src="./assets/eye.jpg" />
-        <label @click="toggleBlindMode">Версия для слабовидящих</label>
+        <label @click="toggleBlind">Версия для слабовидящих</label>
       </div>
     </div>
     <div class="body">
@@ -90,7 +90,7 @@ $borderThick: clamp(0.5px, max(0.15vw, 0.15vh), 5px);
   align-items: center;
   font-family: "Montserrat", sans-serif;
   background-color: $colorD;
-  font-size: $fontSizeA;
+  font-size: 1em;
 }
 
 .navbar {
@@ -182,7 +182,6 @@ $borderThick: clamp(0.5px, max(0.15vw, 0.15vh), 5px);
   height: min(8vh, 8vw);
   aspect-ratio: initial;
   filter: saturate(0.7);
-  // transform: scale(1.3);
 }
 
 .blind-mode>label {
@@ -223,7 +222,7 @@ $borderThick: clamp(0.5px, max(0.15vw, 0.15vh), 5px);
   width: 100%;
   text-align: center;
   background-color: white;
-  color: $colorB;
+  color: $colorA;
 }
 
 .news {

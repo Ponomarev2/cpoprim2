@@ -30,16 +30,10 @@ onUpdated(() => {
 
 .container {
   background-color: white;
-  color: #000;
+  /* color: var(--colorB); */
   margin-top: 20px;
 }
 
-.text {
-  color: #000;
-  font-size: 1em;
-  line-height: 1.5em;
-  text-indent: 20px;
-}
 
 h1 {
   font-size: 2em;
