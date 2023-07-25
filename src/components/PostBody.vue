@@ -1,6 +1,9 @@
 <script setup>
-import { ref, onUpdated, onMounted } from 'vue'
+import { ref, onUpdated } from 'vue'
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 import { news } from "../../data/NewsData.js"
+
 
 const props = defineProps(["id"]);
 const data = ref(news.find(x => x.id == props.id));
@@ -19,7 +22,15 @@ onUpdated(() => {
       <div v-if="data">
         <p v-for="par in data.body.split('\n') ">{{ par }}</p>
       </div>
-      <img v-if="data.images" v-for="img in data.images" :src="img_dir + img" width="600" />
+      <carousel v-if="data.images" :items-to-show="1" wrapAround="true">
+        <slide v-for="(img, i) in data.images" :index="i" :key="i">
+          <img :src="img_dir + img" />
+        </slide>
+        <template #addons>
+          <navigation />
+          <pagination />
+        </template>
+      </carousel>
       <div class="date">
         {{ data.date ? data.date : "23.03.2023" }}
       </div>
@@ -48,5 +59,11 @@ h1 {
 
 p {
   text-indent: 1em;
+}
+
+img {
+  aspect-ratio: initial;
+  max-width: 90%;
+  max-height: 600px;
 }
 </style>
