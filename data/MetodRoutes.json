@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Архив",
+	"route": "/otdel/metod/arxiv"
+  },
+  {
+    "name": "Аттестация педагогических работников",
+	"route": "/otdel/metod/test"
+  },
+  {
+    "name": "Виртуальный методический кабинет",
+	"route": "/otdel/metod/virtua"
+  },
+  {
+    "name": "Движение вверх",
+	"route": "/otdel/metod/up"
+  },
+  {
+    "name": "Инновационная деятельность",
+	"route": "/otdel/metod/innovation"
+  },
+  {
+    "name": "Конкурсы для школьников",
+	"route": "/otdel/metod/school"
+  },
+  {
+    "name": "Конкурсы педагогического мастерства",
+	"route": "/otdel/metod/ped"
+  },
+  {
+    "name": "Наставничество",
+	"route": "/otdel/metod/arxiv"
+  },
+  {
+    "name": "Олимпиады школьников",
+	"route": "/otdel/metod/arxiv"
+  },
+  {
+    "name": "Повышение квалификации",
+	"route": "/otdel/metod/arxiv"
+  },
+  {
+    "name": "Профильное обучение",
+	"route": "/otdel/metod/arxiv"
+  },
+  {
+    "name": "ФГОС",
+	"route": "/otdel/metod/arxiv"
+  },
+  {
+    "name": "ШНОР",
+	"route": "/otdel/metod/arxiv"
+  }
+]
