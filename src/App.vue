@@ -89,7 +89,7 @@ $borderThick: clamp(0.5px, max(0.15vw, 0.15vh), 5px);
   justify-content: center;
   align-items: center;
   font-family: "Montserrat", sans-serif;
-  background-color: $colorD;
+  background-color: $colorE;
   font-size: 1em;
 }
 

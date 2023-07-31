@@ -1,18 +1,24 @@
 <script setup>
+
 import { ref, onMounted } from "vue";
 import NewsMini from "./NewsMini.vue";
-import { news } from "../../data/NewsData.js"
+import axios from 'axios'
 
-// const reader = new FileReader();
-// const text = reader.readAsText('./books.xml');
-// const parser = new DOMParser();
-// xmlDoc = parser.parseFromString(text, "text/xml");
+const news = ref([]);
+var news_sorted = ref([]);
+const load_data = axios
+  .get("/data/news.json")
+  .then((response) => {
+    news.value = response.data;
+    news_sorted.value = news.value.sort(function (a, b) { return -(a.id - b.id) }); // order by id desc;
+  })
 
-const props = defineProps(["count", "items"]);
-let news_sorted = news.sort(function (a, b) { return -(a.id - b.id) }); // order by id descend;
+load_data;
+
 onMounted(() => {
-  console.log(news_sorted);
+  load_data;
 })
+
 </script>
 
 <template>

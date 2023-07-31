@@ -1,4 +1,4 @@
-export const news = [
+export var news = [
   {
     id: 1,
     header: "Заголовок 1",
@@ -12,7 +12,7 @@ export const news = [
     header: "Заголовок 2",
     body: 'Language has long been considered the exclusive provenance of humans. \n \
       But in the animal kingdom, birds, not primates, communicate with the level of vocal complexity and variability closest to ours.',
-    images: ['1.png', '2.jpg'],
+    images: ['1.png', '2.jpg', '3.jpg', '4.jpeg'],
     date: "21.01.2023",
   },
   {

@@ -1,16 +1,33 @@
 <script setup>
 import { ref, onUpdated, onMounted } from 'vue'
+import axios from 'axios'
 import NewsMini from "./NewsMini.vue";
-import { RouterLink } from "vue-router";
-import { news } from "../../data/NewsData.js"
 
-const props = defineProps([]);
+const news = ref([]);
+var news_sorted = [];
+const data = ref([]);
 const start = ref(0);
-var news_sorted = news.sort(function (a, b) { return -(a.id - b.id) }); // order by id descend;
-const data = ref(news_sorted);
+
+const load_data = axios
+  .get("/data/news.json")
+  .then((response) => {
+    news.value = response.data;
+    news_sorted.value = news.value.sort(function (a, b) { return -(a.id - b.id) }); // order by id desc;
+    news_sorted.value = JSON.parse(JSON.stringify(news_sorted.value));
+    data.value = news_sorted.value.slice(start.value, start.value + 20);
+  })
+
+load_data;
+
+
+onMounted(() => {
+  load_data;
+
+})
 
 onUpdated(() => {
-  data.value = news_sorted.slice(start, start + 20);
+  // data.value = news_sorted.value.slice(start.value, start.value + 20);
+  // console.log(data.value);
 })
 
 </script>

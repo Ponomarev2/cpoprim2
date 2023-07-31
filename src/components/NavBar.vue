@@ -11,9 +11,15 @@ const props = defineProps(["id", "header", "content", "date"]);
       <li>
         <a href="#">О МКУ ЦПО</a>
         <ul>
-          <li><a href="#">Основные сведения</a></li>
-          <li><a href="#">Устав</a></li>
-          <li><a href="#">Структура</a></li>
+          <li>
+            <RouterLink to="/nav/about/info">Основные сведения</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/nav/about/ustav">Устав</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/nav/about/structure">Структура</RouterLink>
+          </li>
         </ul>
       </li>
       <li>
@@ -65,7 +71,7 @@ li {
 }
 
 .navbar li {
-  width: clamp(16em, 16vw, 20em);
+  width: clamp(15em, 15vw, 20em);
   background: $colorA;
   display: flex;
   align-items: center;
