@@ -1,18 +1,28 @@
 <script setup>
+import { ref, onMounted } from "vue";
 import DepartCard from "../components/DepartCard.vue";
 import PageHeader from "../components/PageHeader.vue";
+import axios from 'axios'
 
+const routes = ref([]);
+const load_data = axios
+  .get("/data/PmpkRoutes.json")
+  .then((response) => {
+    routes.value = response.data;
+  })
+
+load_data;
+
+onMounted(() => {
+  load_data;
+})
 </script>
 
 <template>
   <main>
     <PageHeader class="page-header" title="ПМПК" />
     <div class="grid">
-      <DepartCard :name="'Основные направления'" :to="'/pmpk/1'" />
-      <DepartCard :name="'Документы для прохождения комиссии'" :to="'/pmpk/2'" />
-      <DepartCard :name="'Диагностическое обследование'" :to="'/pmpk/3'" />
-      <DepartCard :name="'Выбор образовательного маршрута'" :to="'/pmpk/4'" />
-      <DepartCard :name="'Расписание заседаний ПМПК'" :to="'/pmpk/rasp'" />
+      <DepartCard v-for="elem in routes" :name="elem['name']" :to="elem['route']" />
     </div>
   </main>
 </template>

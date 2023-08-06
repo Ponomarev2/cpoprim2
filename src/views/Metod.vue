@@ -9,7 +9,6 @@ const load_data = axios
   .get("/data/MetodRoutes.json")
   .then((response) => {
     routes.value = response.data;
-    console.log(response.data);
   })
 
 load_data;

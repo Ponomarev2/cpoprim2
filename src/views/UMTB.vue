@@ -24,10 +24,6 @@ onMounted(() => {
     <PageHeader class="page-header" title="УМТБ" />
     <div class="grid">
       <DepartCard v-for="elem in routes" :name="elem['name']" :to="elem['route']" />
-      <!-- <DepartCard :name="'Мониторинг безопасности'" :to="'/metod'" />
-      <DepartCard :name="'Мониторинг ОЗП'" :to="'/pmpk'" />
-      <DepartCard :name="'Организация подвоза детей в каникулярное время'" :to="'/umtb'" />
-      <DepartCard :name="'Организация подвоза детей в период учебного года'" :to="'/metod'" /> -->
     </div>
   </main>
 </template>

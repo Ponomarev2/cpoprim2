@@ -26,7 +26,7 @@ onMounted(() => {
 })
 
 onUpdated(() => {
-  // data.value = news_sorted.value.slice(start.value, start.value + 20);
+  data.value = news_sorted.value.slice(start.value, start.value + 20);
   // console.log(data.value);
 })
 

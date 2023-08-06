@@ -13,7 +13,6 @@ const load_data = axios
   .then((response) => {
     news.value = response.data;
     data.value = news.value.find(x => x.id == props.id);
-    console.log('data', data.value)
   })
 
 load_data;

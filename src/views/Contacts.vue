@@ -38,7 +38,7 @@ const map = ref(YandexMap)
           </tr>
           <tr>
             <td height="44" bordercolor="#000000" bgcolor="#FFFFFF">
-              <div align="center"><strong> </strong></div>
+              <div align="center"><strong>Петряева Анастасия Игоревна</strong></div>
             </td>
             <td bordercolor="#000000" bgcolor="#FFFFFF">
               <div align="center"><strong>Начальник методического отдела </strong></div>

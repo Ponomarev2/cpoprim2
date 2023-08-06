@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Основные направления",
+	"route": "/otdel/pmpk/directions"
+  },
+  {
+    "name": "Документы для прохождения комиссии",
+	"route": "/otdel/pmpk/comission"
+  },
+  {
+    "name": "Диагностическое обследование",
+	"route": "/otdel/pmpk/diagnostic"
+  },
+  {
+    "name": "Выбор образовательного маршрута",
+	"route": "/otdel/pmpk/eduway"
+  },
+  {
+    "name": "Расписание заседаний ПМПК",
+	"route": "/otdel/pmpk/schedule"
+  }
+]
