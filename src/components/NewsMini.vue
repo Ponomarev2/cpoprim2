@@ -17,8 +17,8 @@ const props = defineProps(["id", "header", "content", "date"]);
 
 <style lang="scss" scoped>
 $colorA: #47BBED;
-$colorB: #599FE0;
-$colorC: #2AA7F7;
+$colorB: #457aad;
+$colorC: #2784be;
 $colorD: #AACCFA;
 
 .container {
@@ -34,7 +34,7 @@ $colorD: #AACCFA;
 }
 
 .date {
-  color: darkorange;
+  color: orange;
 }
 
 a {
