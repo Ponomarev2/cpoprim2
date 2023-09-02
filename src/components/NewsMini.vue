@@ -38,7 +38,6 @@ $colorD: #AACCFA;
 }
 
 a {
-  font-size: 1em;
   text-decoration: none;
   width: fit-content;
   color: $colorC;

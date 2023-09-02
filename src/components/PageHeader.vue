@@ -11,9 +11,7 @@ const props = defineProps(["title"]);
 </template>
 
 <style scoped>
-h2 {
-  font-size: 1.7vw;
-}
+h2 {}
 
 .box {
   background-color: rgb(233, 233, 233);

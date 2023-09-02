@@ -31,6 +31,7 @@ $colorD: #BFD1E6;
   height: min(15vw, 20vh);
   background-color: $colorB;
   font-family: "Montserrat", sans-serif;
+  font-size: 1.2em;
 }
 
 .container:hover {
@@ -43,7 +44,6 @@ $colorD: #BFD1E6;
 }
 
 a {
-  font-size: min(1.5vw, 1.5em);
   text-align: center;
   color: white;
   font-weight: bold;

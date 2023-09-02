@@ -54,8 +54,6 @@ onUpdated(() => {
 </template>
 
 <style lang="scss" scoped>
-$fontSizeBody: calc(1px + 1vw);
-
 .date {
   margin-top: 1rem;
   text-align: right;
@@ -65,12 +63,10 @@ $fontSizeBody: calc(1px + 1vw);
   background-color: white;
   /* color: var(--colorB); */
   margin-top: 1rem;
-  font-size: $fontSizeBody;
 }
 
 
 h1 {
-  font-size: 2em;
   text-align: center;
   padding-bottom: 1rem;
 }

@@ -9,7 +9,7 @@ import SideBanner3 from "./components/SideBanner3.vue";
 import NavBar from "./components/NavBar.vue";
 
 var blind = false;
-const fontSize = ref(1);
+const fontSize = ref(1.1);
 const colorA = ref("#0A2647");
 const colorB = ref("#44658A");
 const colorC = ref("#6184AB");
@@ -17,23 +17,21 @@ const colorD = ref("#7EA3CC");
 const colorE = ref("#9FBAD9");
 const colorF = ref("#BFD1E6");
 const filter = ref('grayscale(0)');
-const blind_mode_title = ref('Версия для слабовидящих');
 
 function toggleBlind() {
   blind = !blind;
   if (blind) {
-    fontSize.value = 2;
+    fontSize.value = 1.5;
     colorA.value = "black";
     colorB.value = "black";
     colorC.value = "gray";
     colorD.value = "gray";
     colorE.value = "lightgray";
     colorF.value = "white";
-    filter.value = 'grayscale(1) contrast(1.2)';
+    filter.value = 'grayscale(1) contrast(1.0)';
     border.value = '1vw solid black';
-    blind_mode_title.value = 'Обычная версия сайта';
   } else {
-    fontSize.value = 1;
+    fontSize.value = 1.1;
     colorA.value = "#0A2647";
     colorB.value = "#44658A";
     colorC.value = "#6184AB";
@@ -41,13 +39,12 @@ function toggleBlind() {
     colorE.value = "#9FBAD9";
     colorF.value = "#BFD1E6";
     filter.value = 'grayscale(0)';
-    blind_mode_title.value = 'Версия для слабовидящих';
   }
 }
 </script>
 
 <template>
-  <div class="page" :style="{ 'font-size': fontSize + 'em', 'background-color': colorE, 'filter': filter }">
+  <div class="page" :style="{ 'font-size': fontSize + 'vw', 'background-color': colorE, 'filter': filter }">
     <div class="navbar">
       <NavBar />
     </div>
@@ -57,23 +54,27 @@ function toggleBlind() {
         <img src="./assets/logo.png" :style="{ 'filter': filter }" />
       </RouterLink>
       <div class="heading">
-        <label class="big" :style="{ 'color': colorB }">
+        <label class="big" :style="{ 'color': colorB, 'font-size': 2 * fontSize + 'vw' }">
           <b>МКУ "Центр поддержки образования"</b>
         </label>
         <br>
-        <label class="small" :style="{ 'color': colorD }">г. Приморско-Ахтарск</label>
+        <label class="small" :style="{ 'color': colorD, 'font-size': 1.5 * fontSize + 'vw' }">г. Приморско-Ахтарск</label>
       </div>
       <div class="blind-mode">
         <img src="./assets/eye.jpg" />
-        <label @click="toggleBlind" :style="{ 'color': colorB }">{{ blind_mode_title }}</label>
+        <label @click="toggleBlind" :style="{ 'color': colorB, 'font-size': fontSize + 'vw' }">
+          {{ blind ? 'Обычная версия сайта' : 'Версия для слабовидящих' }}
+        </label>
       </div>
     </div>
     <div class="body">
       <div class="wrapper">
         <div class="aside">
-          <label>Новости</label>
-          <NewsColumn />
-          <RouterLink to="/news" class="news" :style="{ 'color': colorC }">Все новости...</RouterLink>
+          <label :style="{ 'font-size': 1.5 * fontSize + 'vw' }">Новости</label>
+          <NewsColumn :style="{ 'font-size': fontSize + 'vw' }" />
+          <RouterLink to="/news" class="news" :style="{ 'color': colorC, 'font-size': 1.5 * fontSize + 'vw' }">
+            Все новости...
+          </RouterLink>
           <div class="side-banners">
             <SideBanner1 />
             <SideBanner2 />
@@ -81,11 +82,11 @@ function toggleBlind() {
           </div>
         </div>
         <div class="content" :style="{ 'color': colorB }">
-          <RouterView />
+          <RouterView :style="{ 'font-size': fontSize + 'vw' }" />
         </div>
       </div>
     </div>
-    <div class="foot" :style="{ 'background-color': colorC }">
+    <div class="foot" :style="{ 'background-color': colorC, 'font-size': fontSize + 'vw' }">
       <div>| | Приморско-Ахтарск | |</div>
       <div>2023</div>
     </div>
@@ -116,11 +117,9 @@ $borderThick: clamp(0.5px, max(0.15vw, 0.15vh), 5px);
   justify-content: center;
   align-items: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 1em;
 }
 
 .navbar {
-  font-size: $fontSizeA;
   width: 100%;
   height: calc(fit-content + 2em);
   z-index: 3;
@@ -132,7 +131,7 @@ $borderThick: clamp(0.5px, max(0.15vw, 0.15vh), 5px);
   position: absolute;
   width: 100%;
   height: 60vh;
-  background-image: url("./assets/park.jfif");
+  background-image: url("./assets/skyline.png");
   background-size: cover;
   background-position-y: -10vh;
   filter: grayscale(0);
@@ -176,16 +175,14 @@ $borderThick: clamp(0.5px, max(0.15vw, 0.15vh), 5px);
   display: block;
   height: fit-content;
   text-align: center;
+  width: 50%;
 }
 
 .big {
   font-family: "Roboto Slab", serif;
-  font-size: calc($fontSizeA * 2.1);
 }
 
-.small {
-  font-size: calc($fontSizeA * 1.3);
-}
+.small {}
 
 
 .blind-mode {
@@ -211,7 +208,6 @@ $borderThick: clamp(0.5px, max(0.15vw, 0.15vh), 5px);
 
 .blind-mode>label {
   margin-top: 1vh;
-  font-size: calc($fontSizeA * 0.8);
   font-weight: bold;
   text-transform: uppercase;
   -webkit-touch-callout: none;
@@ -294,6 +290,10 @@ $borderThick: clamp(0.5px, max(0.15vw, 0.15vh), 5px);
   width: 90%;
   color: white;
   text-align: center;
+}
+
+.foot:hover {
+  cursor: default;
 }
 
 @media (max-width: 700px) {
